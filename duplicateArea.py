@@ -21,12 +21,13 @@ def copyStructure(x1,y1,z1,x2,y2,z2):
     print("Please wait...")
 
     # Copy the structure
-    for outter in range(height):
+    for row in range(height):
         structure.append([])
-        for inner in range(width):
-            structure[outter].append([])
-            for repeat in range(length):
-                structure.append([])
+        for column in range(width):
+            structure[row].append([])
+            for depth in range(length):
+                block = mc.getBlock(x1 + column, y1 + row, z1 + depth)
+                structure[row][column].append(block)
 
     return structure
 
