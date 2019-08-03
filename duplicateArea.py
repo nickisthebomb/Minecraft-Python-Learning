@@ -24,7 +24,7 @@ def copyStructure(x1,y1,z1,x2,y2,z2):
     for outter in range(height):
         structure.append([])
         for inner in range(width):
-            structure[outter].append(copyStructure)
+            structure[outter].append([])
             for repeat in range(length):
                 structure.append([])
 
